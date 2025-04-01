@@ -7,7 +7,8 @@ FlatList → Lista otimizada para grandes quantidades de dados
 
 SectionList → Lista otimizada para seções de dados
 
-![Screenshot_20250401_135029_Expo Go](https://github.com/user-attachments/assets/04f39fef-ae3f-48f7-b3ba-7c936c326883)
-![Screenshot_20250401_135035_Expo Go](https://github.com/user-attachments/assets/52762576-978a-4693-9e2b-6b00cf71c000)
+![Imagem do WhatsApp de 2025-04-01 à(s) 17 35 54_f00c1c59](https://github.com/user-attachments/assets/dd71f374-525f-48ab-9107-9b8814eb14d3)
 
+![Imagem do WhatsApp de 2025-04-01 à(s) 17 35 55_7fcc997d](https://github.com/user-attachments/assets/29e71c89-865f-4d38-a9f7-239874b9c2be)
 
+![Imagem do WhatsApp de 2025-04-01 à(s) 17 35 55_4685f2fe](https://github.com/user-attachments/assets/29bedfaf-6019-4b70-9946-69a575c01de4)
