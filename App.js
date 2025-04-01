@@ -42,23 +42,23 @@ const sectionData = [
 
 export default function App() {
   return (
-    // SafeAreaView assegura que o conteúdo não seja coberto por elementos como o notch (recorte superior da tela)
     <SafeAreaView style={styles.container}>
-    
-      <ScrollView contentContainerStyle={styles.scrollView}>
-        <Text style={styles.title}>Exemplo de Página Simples</Text>  
+      <Text style={styles.title}>Exemplo de Página Simples</Text>  
 
-        <Text style={styles.subTitle}>FlatList:</Text>
-        <FlatList
-          data={data}  // Passa os dados para a FlatList
-          renderItem={({ item }) => (
-            // Renderiza cada item da lista como um texto
-            <Text style={styles.item}>Título: {item.title}</Text>
-          )}
-          keyExtractor={(item) => item.id}  // Usa o 'id' de cada item como chave única
-        />
+      {/* FlatList diretamente na SafeAreaView */}
+      <Text style={styles.subTitle}>FlatList:</Text>
+      <FlatList
+        style={styles.listContainer}
+        data={data}  // Passa os dados para a FlatList
+        renderItem={({ item }) => (
+          <Text style={styles.item}>Título: {item.title}</Text>
+        )}
+        keyExtractor={(item) => item.id}  // Usa o 'id' de cada item como chave única
+      />
 
-        <Text style={styles.subTitle}>SectionList:</Text>
+      {/* SectionList dentro de uma ScrollView */}
+      <Text style={styles.subTitle}>SectionList:</Text>
+      <ScrollView style={styles.listContainer}>
         <SectionList
           sections={sectionData}  // Passa os dados das seções
           renderItem={({ item }) => (
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20,
+    marginTop: 20,
     color: '#ff00a8',
   },
   subTitle: {
@@ -108,5 +108,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#ff00a8',
     padding: 10,
     color: 'white',
+  },
+  listContainer: {
+    maxHeight: 300, 
+    marginBottom: 20, 
   },
 });
