@@ -70,9 +70,21 @@ export default function App() {
           keyExtractor={(item) => item.id} 
         />
       </ScrollView>
+      <Text style={styles.subTitle}>Rolagem Horizontal:</Text>
+      <FlatList
+        style={styles.horizontalList}
+        data={data} 
+        horizontal
+        showsHorizontalScrollIndicator={true}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <Text style={styles.horizontalItem}>{item.title}</Text>
+        )}
+      />
     </SafeAreaView>
   );
 }
+
 
 
 const styles = StyleSheet.create({
@@ -85,7 +97,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 20,
+    marginTop: 30,
     color: '#ff00a8',
   },
   subTitle: {
@@ -110,7 +122,21 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   listContainer: {
-    maxHeight: 300, 
+    maxHeight: 200, 
     marginBottom: 20, 
+  },
+  horizontalList: {
+    marginTop: 20,
+    marginBottom: 20,
+    paddingHorizontal: 10,
+    maxHeight: 50, 
+  },
+  horizontalItem: {
+    fontSize: 18,
+    padding: 10,
+    backgroundColor: '#e19fcb',
+    marginHorizontal: 5,
+    borderRadius: 5,
+    textAlign: 'center', 
   },
 });
